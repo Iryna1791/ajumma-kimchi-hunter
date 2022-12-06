@@ -110,10 +110,12 @@ createObstacles() {
     move() {
         this.positionX -= 20
         this.element.style.right = this.positionX + "px";
+        this.obstaclesPosition = [0, 100, 200]
+        this.element.positionY = obstaclesPosition[Math.floor(Math.random() * obstaclesPosition.length)]
     }
 
     Collision() {
-        this.obstacles = obstacles =obstacle.positionX < 100 && player.positionY === obstacle.positionY
+        this.obstacles = obstacles = obstacle.positionX < 100 && player.positionY === obstacle.positionY
             return gameOver()
             }
         }
@@ -129,5 +131,3 @@ function changeTheme(){
 const myGame = new Game()
 myGame.start()
 
-// this.obstaclesPosition = [0, 100, 200]
-    // this.element.positionY = obstaclesPosition[Math.floor(Math.random() * obstaclesPosition.length)]
