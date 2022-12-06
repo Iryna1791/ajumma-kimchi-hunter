@@ -15,9 +15,17 @@ class Game {
 
     startObstacle(){
         setInterval(() => {
-            let newObstacle = new Obstacles()
+            for (let i = 0; i < this.obstacles.length; i++) {
+                this.obstacles[i].move()
+                // this.obstacles[i].positionX += -1; 
+                // this.obstacles[i].update(); 
+            }
+            let randomX = 840
+            let randomY = Math.floor(Math.random() * 200 )
+            console.log(Math.random())
+            console.log(randomY)
+            let newObstacle = new Obstacles(randomX, randomY)
             this.obstacles.push(newObstacle)
-            this.obstacles[0].move()
       
         } , 2000)
             
@@ -82,12 +90,12 @@ class Player {
 
 
 class Obstacles {
-    constructor() {
+    constructor(positionX, positionY) {
         this.width = "60px"
         this.height = "60px"
         this.color = "brown"
-        this.positionX = 10
-        this.positionY = 250
+        this.positionX = positionX
+        this.positionY = positionY
         this.element = null
         this.createObstacles()
     }
@@ -110,11 +118,9 @@ createObstacles() {
     move() {
         this.positionX -= 20
         this.element.style.right = this.positionX + "px";
-        this.obstaclesPosition = [0, 100, 200]
-        this.element.positionY = obstaclesPosition[Math.floor(Math.random() * obstaclesPosition.length)]
     }
 
-    Collision() {
+    collision() {
         this.obstacles = obstacles = obstacle.positionX < 100 && player.positionY === obstacle.positionY
             return gameOver()
             }
