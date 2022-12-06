@@ -1,9 +1,28 @@
-html {
-    font-size: 10px;
-    background-color: rgb(142, 233, 139);
-}
 
-h1 {
+ body {
+    position: relative;
+    
+ }
+
+ .alternateBackground {
+    background-color: aquamarine;
+ }
+
+ #game-board{
+    position:absolute;
+    width: 900px;
+    height: 600px;
+    border: 1px solid black;
+ }
+
+ .player {
+    position: absolute
+ }
+
+ .obstacles {
+    position: absolute;
+ }
+/* h1 {
     font-size: 4rem;
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 0rem;
@@ -45,4 +64,4 @@ p {
     border-radius: 12px;
     margin-bottom: 10rem;
     margin-left: 78rem;
-}
+} */
