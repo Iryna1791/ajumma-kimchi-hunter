@@ -3,13 +3,23 @@ const board = document.getElementById("game-board");
 const boardHeight = board.clientHeight;
 const boardWidht = board.clientWidth;
 const obstaclesSize = 60;
-const playerSize = 70;
+const playerSize = 75;
+let timer = 0;
+const resultDisplay=document.querySelector('.results')
 
 class Game {
   constructor() {
     this.player = null;
     this.obstacles = [];
   }
+
+  checkObstaclesOut(rock){
+  if (rock.positionX === 0){
+        console.log(rock);
+        this.obstacles.shift(rock);
+        rock.element.remove();
+  }
+}
 
   start() {
     console.log("Play");
@@ -25,17 +35,15 @@ class Game {
       for (let i = 0; i < this.obstacles.length; i++) {
         this.obstacles[i].move();
         this.obstacles[i].collision();
+        this.checkObstaclesOut(this.obstacles[i]);
       }
     }, 200);
 
     setInterval(() => {
       let randomX = 840;
       let randomY = Math.floor(Math.random() * (boardHeight - obstaclesSize));
-      // console.log(Math.random());
-      // console.log(randomY);
       let newObstacle = new Obstacles(randomX, randomY);
       this.obstacles.push(newObstacle);
-
       console.log(this.obstacles.length);
     }, 2000);
   }
@@ -45,7 +53,7 @@ class Player {
   constructor() {
     this.width = `${playerSize}px`;
     this.height = `${playerSize}px`;
-    this.color = "red";
+    this.color = "none";
     this.positionX = 10;
     this.positionY = 250;
     this.element = null;
@@ -94,7 +102,7 @@ class Obstacles {
   constructor(positionX, positionY) {
     this.width = `${obstaclesSize}px`;
     this.height = `${obstaclesSize}px`;
-    this.color = "brown";
+    this.color = "none";
     this.positionX = positionX;
     this.positionY = positionY;
     this.element = null;
@@ -115,6 +123,7 @@ class Obstacles {
   move() {
     this.positionX -= 20;
     this.element.style.left = this.positionX + "px";
+  
   }
 
   collision() {
@@ -132,17 +141,23 @@ class Obstacles {
 }
 
 function gameOver() {
-  console.log(this.obstacles);
-  console.log("gameOver");
-  alert("gameOver");
+    const gameOverPage = document.getElementById('game-over-screen');
+    gameOverPage.style.display = 'block';
 }
 
-// restartBotton(){}
-
-function changeTheme() {
-  const bodyElement = document.querySelector("body");
-  bodyElement.setAttribute("class", "alternateBackground");
+function goBack () {
+    const tryAgainBotton = document.getElementById('start-again');
+    tryAgainBotton.setAttribute
 }
+
+// function changeTheme(){
+//     const bodyElement= document.querySelector('body');
+//     bodyElement.setAttribute('class', 'alternateBackground')
+// }
+
+
+
+
 const myGame = new Game();
 myGame.start();
 
@@ -323,4 +338,3 @@ myGame.start();
 // }
 // const myGame = new Game()
 // myGame.start()
-
