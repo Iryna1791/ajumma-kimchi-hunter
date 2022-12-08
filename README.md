@@ -11,8 +11,8 @@ The player must move up and down (using the arrows) to avoid collision. If the p
 •	Rocks move towards the player from right to left
 •	When colliding with a player, game over
 
-## Data structure
-# game.js
+# Data structure
+## game.js
 Game  {}
 checkObstaclesOut() {}
 start() {}
@@ -40,4 +40,4 @@ gameOver() {}
 •	game- GameOver
 
 ## Links
-- [Github repository Link] (https://github.com/Iryna1791/ajumma-kimchi-hunter)
+- [Github repository Link](https://github.com/Iryna1791/ajumma-kimchi-hunter)
