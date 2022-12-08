@@ -1,7 +1,7 @@
 # Ajumma Kimchi Hunter
 ## Description
 Here is the link to try play the game: 
-- [Ajumma Kimchu Hunter](https://iryna1791.github.io/ajumma-kimchi-hunter/)
+- [Ajumma Kimchi Hunter](https://iryna1791.github.io/ajumma-kimchi-hunter/)
 
 - The player must move up and down (using the arrows) to avoid collision. If the player collide with the rock: Game over and can click on the button: “Start Game Again”.
 ![Getting Started](./images/image.png)
