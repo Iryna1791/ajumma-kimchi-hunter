@@ -43,17 +43,7 @@
     background-size:inherit;
 }
 
-#start-again {
-    width: 15rem;
-    height: 10rem;
-    font-size: 3rem;
-    background-color: rgb(182, 74, 150);
-    color: white;
-    border-radius: 12px;
-    display: none;
-
-
-}
+/* #start-again {} */
 
 h1 {
     margin-top: 15rem;

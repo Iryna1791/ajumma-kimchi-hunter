@@ -143,12 +143,27 @@ class Obstacles {
 function gameOver() {
     const gameOverPage = document.getElementById('game-over-screen');
     gameOverPage.style.display = 'block';
+    document.addEventListener('click',function(){
+        location.reload()
+
+    }) 
 }
 
-function goBack () {
-    const tryAgainBotton = document.getElementById('start-again');
-    tryAgainBotton.setAttribute
-}
+
+
+
+
+// function goBack () {
+//     const tryAgainBotton = document.getElementById('start-again');
+//     tryAgainBotton.setAttribute('id', 'start-again')
+// }
+
+
+// function goBack {
+//     const tryAgainBotton = document.querySelector('sart-again');
+//     tryAgainBotton.
+// }
+
 
 // function changeTheme(){
 //     const bodyElement= document.querySelector('body');
