@@ -2,7 +2,7 @@
 ## Description
 Here is the link to try play the game: https://iryna1791.github.io/ajumma-kimchi-hunter/
 The player must move up and down (using the arrows) to avoid collision. If the player collide with the rock: Game over and can click on the button: “Start Game Again”.
-![Getting Started](./images/image.png)
+![Getting Started](./images/image.png 250x250)
  
 ## MVP (DOM)
 •	The game has one player
